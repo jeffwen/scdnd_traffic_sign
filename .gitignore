@@ -1,0 +1,11 @@
+## jupyer notebook checkpoints
+.ipynb_checkpoints
+
+## data folder
+traffic-signs-data/
+
+## tensorflow saved files 
+checkpoint
+lenet_traffic.data*
+lenet_traffic.index
+lenet_traffic.meta
