@@ -187,7 +187,7 @@ I plotted the top 5 predictions (based on softmax probabilities) for the 6 diffe
 ![alt text][softmax5]
 ![alt text][softmax6]
 
-We got ~83.3% accuracy (5/6) were correctly classified with the 80 kph sign misclassified as 30 kph. This is understandable because the model might have mistaken the `8` as a `3`; however, when looking at the image, it seems quite obvious that the image is `80`. Overall, the model seemed to to quite well on unseen data! 
+We got ~83.3% accuracy (5/6) were correctly classified with the 80 kph sign misclassified as 30 kph. This is understandable because the model might have mistaken the `8` as a `3`; however, when looking at the image, it seems quite obvious that the image is `80`. When compared to the test set, the unseen images has a lower accuracy, but it is because of the misclassification mentioned above. On the other images, the model is quite certain (high probability), but for the misclassified image there is at least visible uncertianty (in the bar graphs of the probabilities). Overall, the model seemed to to quite well on unseen data!
 
 ### Conclusions and Next Steps
 
