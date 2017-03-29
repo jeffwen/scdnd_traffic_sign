@@ -1,6 +1,6 @@
 ## Traffic Sign Recognition
 
-In this project, we classify [German traffic signs](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
+In this project, we classify [German traffic signs](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). The code for this project can be found in this [IPython notebook](https://github.com/jeffwen/sdcnd_traffic_sign/blob/master/Traffic_Sign_Classifier.ipynb).
 
 The objective of this project is to ultimately design, train, and test a convolutional neural netowk (CNN) to see if we can accurately classify the traffic signs. Specifically, with image classification tasks the variability of input images might cause the model to perform poorly. In order to remedy this situation, we will consider preprocessing steps to ensure that the model is robust to varying input images. Furthermore, depending on how the model performs, we may need to consider regularization steps such as dropouts or L2 regularization. 
 
