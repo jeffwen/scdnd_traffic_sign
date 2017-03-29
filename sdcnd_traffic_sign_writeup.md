@@ -191,7 +191,7 @@ I plotted the top 5 predictions (based on softmax probabilities) for the 6 diffe
 
 From the results above, it seems like the concerns mentioned were actually handled fairly well by the classifier. Most of the images with the skew and brightness concerns are handled well and the probabilities also show that the model was not "unsure" between classes (except for the 80 kph vs 30 kph sign). The model achieved a ~83.3% accuracy with 5/6 images correctly classified. The 80 kph sign was misclassified as 30 kph, but this is understandable because the model might have mistaken the `8` as a `3`. When looking at the image, it seems quite obvious that the image is `80`. Ultimately, I may have to add more 80 kph signs with various image translations to ensure the model does not mistakenly classify these signs.
 
-When compared to the test set, the unseen images has a lower accuracy, but it is because of the misclassification mentioned above. On the other images, the model is quite certain (high probability), while for the misclassified image has visible uncertianty (in the bar graphs of the probabilities). Overall, the model seemed to to quite well on unseen data!
+When compared to the test set, the unseen images has a lower accuracy, but it is because of the misclassification mentioned above. On the other images, the model is quite certain (high probability), while for the misclassified image has visible uncertianty (in the bar graphs of the probabilities). Overall, the model seemed to do quite well on unseen data!
 
 ### Conclusions and Next Steps
 
@@ -205,4 +205,3 @@ While the model performed fairly well, there are improvements that can be made.
 - Model architecture: The LeNet architecture is a good start, but with state-of-the-art advancements such as [Google's Inception-V3](https://github.com/tensorflow/models/tree/master/inception) there are other architectures that might work even better
 
 Ultimately, this was an exciting project that gave me the opportunity to bring together many different techniques and technologies to solve and interesting problem!
-A
