@@ -172,9 +172,11 @@ The above architecture with `EPOCHS = 25`, `BATCH_SIZE = 128`, and `LEARNING_RAT
 - Validation Set Accuracy: ~95%
 - Test Set Accuracy: ~94%
 
+In terms of the optimizer used, I considered using various optimizers such as regular gradient descent, but one of the considerations for switching to the Adam optimizer was that the Adam optimizer takes into account "momentum". Specifically, the Adam optimizer ([read more here](http://sebastianruder.com/optimizing-gradient-descent/index.html#minibatchgradientdescent)) takes "momentum" into account by keeping a decaying average of the past gradients, which usually provides quicker convergence. 
+
 ### Test a Model on New Images
 
-In order to further, test the model's performance on previously unseen images, I found 6 images online and from Google Maps Street View to test with the model.
+In order to further test the model's performance on previously unseen images, I found 6 images from Google Maps Street View to test with the model. Looking at the images below, there are couple factors that might affect the model's ability to classify these new traffic signs. For example, the "Road Work" and "Road Narrows on the Right" signs are captured at an angle. This skew in the image might not get captured by the model because the training data might not have images that are similar. However, when building the training data (via augmenting more images) I tried to include rotated images to deal with this possibility. Additionally, the reduced brightness and skew in the "No Entry" image were potential problems for the classifer.
 
 ![alt text][internet_images]
 
@@ -187,7 +189,9 @@ I plotted the top 5 predictions (based on softmax probabilities) for the 6 diffe
 ![alt text][softmax5]
 ![alt text][softmax6]
 
-We got ~83.3% accuracy (5/6) were correctly classified with the 80 kph sign misclassified as 30 kph. This is understandable because the model might have mistaken the `8` as a `3`; however, when looking at the image, it seems quite obvious that the image is `80`. When compared to the test set, the unseen images has a lower accuracy, but it is because of the misclassification mentioned above. On the other images, the model is quite certain (high probability), but for the misclassified image there is at least visible uncertianty (in the bar graphs of the probabilities). Overall, the model seemed to to quite well on unseen data!
+From the results above, it seems like the concerns mentioned were actually handled fairly well by the classifier. Most of the images with the skew and brightness concerns are handled well and the probabilities also show that the model was not "unsure" between classes (except for the 80 kph vs 30 kph sign). The model achieved a ~83.3% accuracy with 5/6 images correctly classified. The 80 kph sign was misclassified as 30 kph, but this is understandable because the model might have mistaken the `8` as a `3`. When looking at the image, it seems quite obvious that the image is `80`. Ultimately, I may have to add more 80 kph signs with various image translations to ensure the model does not mistakenly classify these signs.
+
+When compared to the test set, the unseen images has a lower accuracy, but it is because of the misclassification mentioned above. On the other images, the model is quite certain (high probability), while for the misclassified image has visible uncertianty (in the bar graphs of the probabilities). Overall, the model seemed to to quite well on unseen data!
 
 ### Conclusions and Next Steps
 
@@ -201,3 +205,4 @@ While the model performed fairly well, there are improvements that can be made.
 - Model architecture: The LeNet architecture is a good start, but with state-of-the-art advancements such as [Google's Inception-V3](https://github.com/tensorflow/models/tree/master/inception) there are other architectures that might work even better
 
 Ultimately, this was an exciting project that gave me the opportunity to bring together many different techniques and technologies to solve and interesting problem!
+A
