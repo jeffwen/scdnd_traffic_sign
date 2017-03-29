@@ -9,7 +9,7 @@ This repository contains an adaptation of the LeNet architecture applied to traf
 
 ![alt text][internet_images] 
 
-The code for this project is in the [IPython Notebook](https://github.com/jeffwen/sdcnd_traffic_sign/blob/master/Traffic_Sign_Classifier.ipynb) and you can dive into the details of what I did by reading the [write-up](https://github.com/jeffwen/sdcnd_traffic_sign/blob/master/sdcnc_traffic_sign_writeup.md).
+The code for this project is in the [IPython Notebook](https://github.com/jeffwen/sdcnd_traffic_sign/blob/master/Traffic_Sign_Classifier.ipynb) and you can dive into the details of what I did by reading the [write-up](https://github.com/jeffwen/sdcnd_traffic_sign/blob/master/sdcnd_traffic_sign_writeup.md).
 
 The final model (built using Tensorflow) was based on the LeNet architecture with additional dropouts added. The final model achieved:
 
